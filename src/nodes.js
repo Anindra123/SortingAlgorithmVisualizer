@@ -1,21 +1,19 @@
-export function swapNodes(list, a, b, delay) {
+export function delay(time) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, time);
+  });
+}
+
+export async function swapNodes(list, a, b, time) {
   let n1 = list[a].cloneNode(true);
   let n2 = list[b].cloneNode(true);
   list[a].replaceWith(n2);
   list[b].replaceWith(n1);
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, delay);
-  });
+  await delay(time);
 }
 
-export function replaceNode(arr, rNum, rWith, delay) {
+export async function replaceNode(arr, rNum, rWith, time) {
   arr[rNum].replaceWith(rWith);
 
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve();
-    }, delay);
-  });
+  await delay(time);
 }

@@ -1,5 +1,5 @@
 import { disableButton } from "./app.js";
-let arr = [];
+export let arr = [];
 const p = document.querySelector(".box");
 const createBlock = (h) => {
   const block = document.createElement("div");
