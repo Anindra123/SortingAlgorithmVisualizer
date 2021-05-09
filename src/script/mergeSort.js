@@ -1,4 +1,4 @@
 const mergeSort = () => {
-  window.alert("MergeSort");
+  console.log("mergesort");
 };
 export { mergeSort };

@@ -26,7 +26,7 @@ header select {
   outline: none;
 }
 header button {
-  padding: 12px 80px;
+  padding: 12px 50px;
   border-radius: 4px;
   background: none;
   border: solid 2px white;
@@ -59,6 +59,14 @@ header button:hover {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  transition: all 0 ease;
+}
+
+.sorting {
+  background-color: rebeccapurple;
+}
+.sorted {
+  background-color: aquamarine;
 }
 
 footer {

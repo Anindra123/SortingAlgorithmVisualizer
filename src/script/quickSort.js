@@ -1,4 +1,4 @@
 const quickSort = () => {
-  window.alert("QuickSort");
+  console.log("quicksort");
 };
 export { quickSort };
