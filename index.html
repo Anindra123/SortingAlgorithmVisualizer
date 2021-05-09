@@ -3,23 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="stylesheet" href="src/styles/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
     <title>Document</title>
   </head>
   <body>
-    <header class="header">
-      <div class="button-container">
-        <button class="bSort">Bubble Sort</button>
-        <button class="SSort">Selection Sort</button>
-        <button class="ISort">Insertion Sort</button>
-        <button class="QSort">Quick Sort</button>
-        <button class="MSort">Merge Sort</button>
-      </div>
+    <header>
+      <select class="algorithms-select">
+        <option value="" selected disabled hidden>Select an algorithm</option>
+        <option value="mergeSort">MergeSort</option>
+        <option value="quickSort">QuickSort</option>
+        <option value="bubbleSort">BubbleSort</option>
+      </select>
+      <button class="run-btn">Run</button>
     </header>
     <section class="mainbody">
-      <div class="box"></div>
-      <button class="randomize">Randomize</button>
+      <div class="bar-container"></div>
     </section>
+    <footer>
+      <button class="randomize">Randomize</button>
+      <div class="slider-container">
+        <input type="range" min="5" max="100" class="slider" id="myRange" />
+      </div>
+    </footer>
+    <script type="module" src="src/script/app.js"></script>
   </body>
-  <script type="module" src="src/app.js"></script>
 </html>
