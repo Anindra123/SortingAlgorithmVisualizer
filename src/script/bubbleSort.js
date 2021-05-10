@@ -6,9 +6,7 @@ import {
 } from "./app.js";
 import { swap } from "./swap.js";
 import { sortedHighlight, sortHighlight } from "./highlight.js";
-const bubbleSort = () => {
-  bubbleSortHelper();
-};
+
 async function bubbleSortHelper() {
   for (let i = heightArray.length; i > 0; i--) {
     for (let j = 0; j < i - 1; j++) {
@@ -20,5 +18,8 @@ async function bubbleSortHelper() {
     await sortedHighlight(i - 1);
   }
 }
+const bubbleSort = () => {
+  bubbleSortHelper();
+};
 
 export { bubbleSort };

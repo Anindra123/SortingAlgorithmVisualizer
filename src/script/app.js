@@ -7,7 +7,7 @@ export let heightArray = [];
 export const bar_container = document.querySelector(".bar-container");
 export const child_node_list = bar_container.childNodes;
 const App = () => {
-  let numOfBars = 50;
+  let numOfBars = 10;
   const slider = document.getElementById("myRange");
   const randomize_btn = document.querySelector(".randomize");
   const algo_run_btn = document.querySelector(".run-btn");

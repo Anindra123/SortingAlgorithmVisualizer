@@ -6,6 +6,8 @@ const removeHighlight = () => {
     let node = highlightedNodes.shift();
     if (!node.classList.contains("sorted")) {
       node.style.backgroundColor = "coral";
+    } else {
+      node.style.backgroundColor = "aquamarine";
     }
   }
 };
