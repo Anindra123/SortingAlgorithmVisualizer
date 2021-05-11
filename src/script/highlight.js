@@ -26,7 +26,7 @@ async function sortHighlight(...nodes) {
     highlightedNodes.push(list[i]);
   });
 
-  await sleep(50);
+  await sleep(10);
 }
 
 export { sortHighlight, sortedHighlight };
