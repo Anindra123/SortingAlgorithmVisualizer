@@ -11,14 +11,7 @@ const removeHighlight = () => {
     }
   }
 };
-async function sortedHighlight(...nodes) {
-  nodes.forEach((i) => {
-    list[i].classList.add("sorted");
-    list[i].style.backgroundColor = "aquamarine";
-    highlightedNodes.push(list[i]);
-  });
-  await sleep(5);
-}
+
 async function sortHighlight(...nodes) {
   removeHighlight();
   nodes.forEach((i) => {
@@ -28,5 +21,20 @@ async function sortHighlight(...nodes) {
 
   await sleep(10);
 }
+function colorBar(node) {
+  node.style.backgroundColor = "aquamarine";
+}
+function resetBarColor() {
+  list.forEach((li) => {
+    li.style.backgroundColor = "coral";
+  });
+}
+async function sortedAnimation() {
+  resetBarColor();
+  for (let i = 0; i < list.length; i++) {
+    colorBar(list[i]);
+    await sleep(50);
+  }
+}
 
-export { sortHighlight, sortedHighlight };
+export { sortHighlight, sortedAnimation };

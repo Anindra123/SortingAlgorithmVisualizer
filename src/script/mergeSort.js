@@ -1,5 +1,5 @@
 import { bar_container, heightArray as arr, heightArray } from "./app.js";
-import { sortHighlight, sortedHighlight } from "./highlight.js";
+import { sortedAnimation, sortHighlight } from "./highlight.js";
 import { insert } from "./insert.js";
 async function merge(startidx, endidx, mididx, mainarr, auxarr) {
   let i = startidx;
@@ -8,32 +8,32 @@ async function merge(startidx, endidx, mididx, mainarr, auxarr) {
   let tempNode = [];
   while (i <= mididx && j <= endidx) {
     if (auxarr[i] < auxarr[j]) {
-      tempNode.push(auxarr[i]);
+      await sortHighlight(i, k);
+      await insert(auxarr[i], k);
       mainarr[k] = auxarr[i];
       k++;
       i++;
     } else {
-      tempNode.push(auxarr[j]);
+      await sortHighlight(j, k);
+      await insert(auxarr[j], k);
       mainarr[k] = auxarr[j];
       k++;
       j++;
     }
   }
   while (i <= mididx) {
-    tempNode.push(auxarr[i]);
+    await sortHighlight(i, k);
+    await insert(auxarr[i], k);
     mainarr[k] = auxarr[i];
     k++;
     i++;
   }
   while (j <= endidx) {
-    tempNode.push(auxarr[j]);
+    await sortHighlight(j, k);
+    await insert(auxarr[j], k);
     mainarr[k] = auxarr[j];
     k++;
     j++;
-  }
-  for (let i = startidx, s = 0; i <= endidx; i++, s++) {
-    await sortHighlight(i);
-    await insert(tempNode[s], i);
   }
 }
 async function mergeSortAlgo(left, right, mainarr, auxarr) {
@@ -44,8 +44,12 @@ async function mergeSortAlgo(left, right, mainarr, auxarr) {
   await merge(left, right, mididx, mainarr, auxarr);
 }
 
-const mergeSort = () => {
+async function mergeSortHelper() {
   let auxarr = arr.slice();
-  mergeSortAlgo(0, arr.length - 1, arr, auxarr);
+  await mergeSortAlgo(0, arr.length - 1, arr, auxarr);
+  await sortedAnimation();
+}
+const mergeSort = () => {
+  mergeSortHelper();
 };
 export { mergeSort };
