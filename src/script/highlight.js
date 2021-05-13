@@ -1,5 +1,6 @@
 import { sleep } from "./speed.js";
-import { child_node_list as list } from "./app.js";
+import { child_node_list as list, animationSpeed } from "./app.js";
+
 const highlightedNodes = [];
 const removeHighlight = () => {
   while (highlightedNodes.length) {
@@ -19,7 +20,7 @@ async function sortHighlight(...nodes) {
     highlightedNodes.push(list[i]);
   });
 
-  await sleep(10);
+  await sleep(animationSpeed);
 }
 function colorBar(node) {
   node.style.backgroundColor = "aquamarine";
@@ -33,7 +34,7 @@ async function sortedAnimation() {
   resetBarColor();
   for (let i = 0; i < list.length; i++) {
     colorBar(list[i]);
-    await sleep(50);
+    await sleep(animationSpeed);
   }
 }
 

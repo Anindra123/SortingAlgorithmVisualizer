@@ -1,4 +1,10 @@
-import { bar_container, heightArray as arr, heightArray } from "./app.js";
+import {
+  bar_container,
+  disableAll,
+  enable,
+  heightArray as arr,
+  heightArray,
+} from "./app.js";
 import { sortedAnimation, sortHighlight } from "./highlight.js";
 import { insert } from "./insert.js";
 async function merge(startidx, endidx, mididx, mainarr, auxarr) {
@@ -45,11 +51,16 @@ async function mergeSortAlgo(left, right, mainarr, auxarr) {
 }
 
 async function mergeSortHelper() {
-  let auxarr = arr.slice();
-  await mergeSortAlgo(0, arr.length - 1, arr, auxarr);
-  await sortedAnimation();
+  try {
+    let auxarr = arr.slice();
+    await mergeSortAlgo(0, arr.length - 1, arr, auxarr);
+    await sortedAnimation();
+  } finally {
+    enable();
+  }
 }
 const mergeSort = () => {
+  disableAll();
   mergeSortHelper();
 };
 export { mergeSort };

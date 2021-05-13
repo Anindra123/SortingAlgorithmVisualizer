@@ -1,4 +1,4 @@
-import { heightArray as arr } from "./app.js";
+import { disableAll, enable, heightArray as arr } from "./app.js";
 import { sortedAnimation, sortHighlight } from "./highlight.js";
 import { sleep } from "./speed.js";
 import { swap } from "./swap.js";
@@ -27,11 +27,16 @@ async function quickSortAlgo(start, end) {
   await quickSortAlgo(right + 1, end);
 }
 async function quickSortHelper() {
-  await quickSortAlgo(0, arr.length - 1);
-  await sortedAnimation();
+  try {
+    await quickSortAlgo(0, arr.length - 1);
+    await sortedAnimation();
+  } finally {
+    enable();
+  }
 }
 
 const quickSort = () => {
+  disableAll();
   quickSortHelper();
 };
 export { quickSort };

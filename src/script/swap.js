@@ -1,7 +1,6 @@
 import { sleep } from "./speed.js";
 import {
-  bar_container,
-  bar_container as container,
+  animationSpeed,
   child_node_list as list,
   heightArray as arr,
 } from "./app.js";
@@ -14,6 +13,6 @@ async function swap(i, j) {
     elem_j.style.height,
     elem_i.style.height,
   ];
-  await sleep(50);
+  await sleep(animationSpeed);
 }
 export { swap };

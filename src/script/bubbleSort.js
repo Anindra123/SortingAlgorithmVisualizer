@@ -3,6 +3,8 @@ import {
   bar_container as container,
   child_node_list as list,
   heightArray,
+  enable,
+  disableAll,
 } from "./app.js";
 import { swap } from "./swap.js";
 import { sortedAnimation, sortHighlight } from "./highlight.js";
@@ -19,10 +21,15 @@ async function bubbleSortAlgo() {
 }
 
 async function bubbleSortHelper() {
-  await bubbleSortAlgo();
-  await sortedAnimation();
+  try {
+    await bubbleSortAlgo();
+    await sortedAnimation();
+  } finally {
+    enable();
+  }
 }
 const bubbleSort = () => {
+  disableAll();
   bubbleSortHelper();
 };
 

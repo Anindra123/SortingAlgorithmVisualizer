@@ -11,15 +11,6 @@ body {
   background-image: linear-gradient(to right, #485563, #29323c);
 }
 
-header {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background-color: #202730;
-  padding: 20px;
-  border-bottom: solid 2px coral;
-}
-
 .mainbody {
   display: flex;
   flex-direction: column;
@@ -41,7 +32,6 @@ header {
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  transition: all 0 ease;
 }
 
 footer {
@@ -49,7 +39,6 @@ footer {
   align-items: center;
   justify-content: space-around;
   padding: 50px;
-
   background-color: #202730;
   border-top: solid 2px coral;
 }
@@ -79,7 +68,12 @@ footer .algo-btn-container button {
   transition: all 0.3s ease;
   display: none;
 }
-footer .algo-btn-container button:hover {
+footer .algo-btn-container button:disabled {
+  border: solid 2px #fff9;
+  color: #fff9;
+}
+
+footer .algo-btn-container button:not([disabled]):hover {
   background-color: white;
   color: black;
 }
@@ -112,6 +106,30 @@ footer .slider-container .slider::-webkit-slider-thumb {
   border: 2px solid white;
   background: rgb(255, 96, 39);
 }
+footer .slider-container .slider::-ms-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background: rgb(255, 96, 39);
+}
+footer .slider-container .slider::-moz-range-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 2px solid white;
+  background: rgb(255, 96, 39);
+}
+
+footer .slider-container .slider:disabled {
+  background-color: #fff9;
+}
+footer .slider-container .slider:disabled::-webkit-slider-thumb {
+  background: rgb(179, 179, 179);
+}
+
 .randomize {
   padding: 12px 50px;
   border-radius: 4px;
@@ -120,7 +138,11 @@ footer .slider-container .slider::-webkit-slider-thumb {
   color: white;
   transition: all 0.3s ease;
 }
-.randomize:hover {
+.randomize:disabled {
+  border: solid 2px #fff9;
+  color: #fff9;
+}
+.randomize:not([disabled]):hover {
   background-color: white;
   color: black;
 }
