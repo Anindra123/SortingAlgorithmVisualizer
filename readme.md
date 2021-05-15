@@ -2,6 +2,8 @@
 
 A website to visualize various sorting algorithms of different time complexity. I always had an interest regarding algorithms and i wanted a way to visually represent them so i enjoyed a lot working on this project and finally complete it. There are six sorting algorithms that you can visualize here.
 
+check out the complete project here : <https://anindra123.github.io/SortingAlgorithmVisualizer>
+
 ## Algorithms
 
 ### Bubble Sort
