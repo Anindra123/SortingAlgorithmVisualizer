@@ -11,7 +11,7 @@ async function merge(startidx, endidx, mididx, mainarr, auxarr) {
   let i = startidx;
   let j = mididx + 1;
   let k = startidx;
-  let tempNode = [];
+  await sortHighlight(i, j);
   while (i <= mididx && j <= endidx) {
     if (auxarr[i] < auxarr[j]) {
       await sortHighlight(i, k);
@@ -21,6 +21,7 @@ async function merge(startidx, endidx, mididx, mainarr, auxarr) {
       i++;
     } else {
       await sortHighlight(j, k);
+      await sortHighlight(k);
       await insert(auxarr[j], k);
       mainarr[k] = auxarr[j];
       k++;

@@ -36,6 +36,7 @@ body {
 
 footer {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   padding: 50px;
@@ -49,16 +50,11 @@ footer select {
 }
 footer .btn-container {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-.algo-btn-container,
-.rand-btn-container {
-  width: 200px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  width: 50%;
+  justify-content: space-around;
 }
+
 footer .algo-btn-container button {
   padding: 12px 30px;
   border-radius: 4px;
@@ -148,8 +144,38 @@ footer .slider-container .slider:disabled::-webkit-slider-thumb {
 }
 .partition {
   height: 40px;
-  width: 4px;
+  width: 5px;
   background-color: coral;
-  margin: 0px 10px;
+  margin: 0px 50px;
   border-radius: 2px;
+}
+
+@media screen and (max-width: 700px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partition {
+    display: none;
+  }
+  footer select {
+    margin: 10px 0px;
+    padding: 0.5em 11em 0.5em 0em;
+  }
+  footer .btn-container {
+    margin: 10px 0px;
+    order: -1;
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  footer .slider-container {
+    margin: 10px 0px;
+  }
+
+  footer .slider-container p {
+    padding: 0px;
+    font-size: 0.9rem;
+  }
 }
