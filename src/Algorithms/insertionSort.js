@@ -1,6 +1,6 @@
-import { insert } from "./insert.js";
-import { disableAll, enable, heightArray as arr } from "./app.js";
-import { sortedAnimation, sortHighlight } from "./highlight.js";
+import { insert } from "../insert.js";
+import { disableAll, enable, heightArray as arr } from "../app.js";
+import { sortedAnimation, sortHighlight } from "../highlight.js";
 
 async function insertionSortAlgo() {
   for (let i = 1; i < arr.length; i++) {

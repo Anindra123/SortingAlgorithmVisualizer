@@ -1,6 +1,6 @@
-import { disableAll, enable, heightArray as arr } from "./app.js";
-import { sortedAnimation, sortHighlight } from "./highlight.js";
-import { swap } from "./swap.js";
+import { disableAll, enable, heightArray as arr } from "../app.js";
+import { sortedAnimation, sortHighlight } from "../highlight.js";
+import { swap } from "../swap.js";
 async function heapify(i, s) {
   let m = i;
   let l = 2 * i + 1;

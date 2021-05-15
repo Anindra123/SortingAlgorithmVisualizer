@@ -1,9 +1,9 @@
-import { bubbleSort } from "./bubbleSort.js";
-import { heapSort } from "./heapSort.js";
-import { insertionSort } from "./insertionSort.js";
-import { mergeSort } from "./mergeSort.js";
-import { quickSort } from "./quickSort.js";
-import { selectionSort } from "./selectionSort.js";
+import { bubbleSort } from "./Algorithms/bubbleSort.js";
+import { heapSort } from "./Algorithms/heapSort.js";
+import { insertionSort } from "./Algorithms/insertionSort.js";
+import { mergeSort } from "./Algorithms/mergeSort.js";
+import { quickSort } from "./Algorithms/quickSort.js";
+import { selectionSort } from "./Algorithms/selectionSort.js";
 
 export let heightArray = [];
 

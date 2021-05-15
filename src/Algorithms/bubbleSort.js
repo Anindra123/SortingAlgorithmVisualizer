@@ -5,9 +5,9 @@ import {
   heightArray,
   enable,
   disableAll,
-} from "./app.js";
-import { swap } from "./swap.js";
-import { sortedAnimation, sortHighlight } from "./highlight.js";
+} from "../app.js";
+import { swap } from "../swap.js";
+import { sortedAnimation, sortHighlight } from "../highlight.js";
 
 async function bubbleSortAlgo() {
   for (let i = heightArray.length; i > 0; i--) {

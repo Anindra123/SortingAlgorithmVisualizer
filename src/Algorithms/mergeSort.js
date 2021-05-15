@@ -4,9 +4,9 @@ import {
   enable,
   heightArray as arr,
   heightArray,
-} from "./app.js";
-import { sortedAnimation, sortHighlight } from "./highlight.js";
-import { insert } from "./insert.js";
+} from "../app.js";
+import { sortedAnimation, sortHighlight } from "../highlight.js";
+import { insert } from "../insert.js";
 async function merge(startidx, endidx, mididx, mainarr, auxarr) {
   let i = startidx;
   let j = mididx + 1;

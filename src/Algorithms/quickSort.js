@@ -1,7 +1,6 @@
-import { disableAll, enable, heightArray as arr } from "./app.js";
-import { sortedAnimation, sortHighlight } from "./highlight.js";
-import { sleep } from "./speed.js";
-import { swap } from "./swap.js";
+import { disableAll, enable, heightArray as arr } from "../app.js";
+import { sortedAnimation, sortHighlight } from "../highlight.js";
+import { swap } from "../swap.js";
 async function quickSortAlgo(start, end) {
   if (start >= end) return;
   let pivot = start;
