@@ -20,7 +20,7 @@ const run_insertionSort = document.querySelector(".run-insertionsort");
 const run_selectionSort = document.querySelector(".run-selectionsort");
 const buttons = document.querySelectorAll("button");
 let numOfBars = 60;
-export let animationSpeed = numOfBars < 30 ? 100 - numOfBars : 30;
+export let animationSpeed = numOfBars < 30 ? 100 - numOfBars : 40;
 export const disableAll = () => {
   buttons.forEach((b) => {
     b.disabled = true;

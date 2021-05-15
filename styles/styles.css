@@ -43,7 +43,7 @@ footer {
   border-top: solid 2px coral;
 }
 footer select {
-  padding: 0.8em 8em 0.8em 0.5em;
+  padding: 0.8em 5em 0.8em 0.5em;
   border-radius: 4px;
   outline: none;
 }
@@ -54,13 +54,13 @@ footer .btn-container {
 }
 .algo-btn-container,
 .rand-btn-container {
-  width: 250px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 footer .algo-btn-container button {
-  padding: 12px 50px;
+  padding: 12px 30px;
   border-radius: 4px;
   background: none;
   border: solid 2px white;
@@ -84,14 +84,14 @@ footer .slider-container {
   justify-content: space-evenly;
 }
 footer .slider-container p {
-  display: inline-block;
-  margin-right: 5px;
+  padding: 10px;
+  margin-right: 50px;
   color: white;
   font-size: 1rem;
 }
 footer .slider-container .slider {
   appearance: none;
-  width: 100%;
+  width: 200px;
   height: 10px;
   background-color: coral;
   border-radius: 10px;
@@ -131,7 +131,7 @@ footer .slider-container .slider:disabled::-webkit-slider-thumb {
 }
 
 .randomize {
-  padding: 12px 50px;
+  padding: 12px 30px;
   border-radius: 4px;
   background: none;
   border: solid 2px white;
@@ -148,7 +148,8 @@ footer .slider-container .slider:disabled::-webkit-slider-thumb {
 }
 .partition {
   height: 40px;
-  width: 2px;
+  width: 4px;
   background-color: coral;
-  margin: 0px 20px;
+  margin: 0px 10px;
+  border-radius: 2px;
 }
