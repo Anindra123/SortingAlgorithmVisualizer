@@ -19,8 +19,11 @@ const run_heapSort = document.querySelector(".run-heapsort");
 const run_insertionSort = document.querySelector(".run-insertionsort");
 const run_selectionSort = document.querySelector(".run-selectionsort");
 const buttons = document.querySelectorAll("button");
+
 let numOfBars = 60;
-export let animationSpeed = numOfBars < 30 ? 100 - numOfBars : 40;
+export let animationSpeed = numOfBars < 50 ? 100 - numOfBars : 40;
+let barwidth = Math.floor(bar_container.clientWidth / numOfBars);
+let margin = Math.floor(bar_container.clientWidth / (numOfBars * 10));
 export const disableAll = () => {
   buttons.forEach((b) => {
     b.disabled = true;
@@ -41,9 +44,8 @@ const createBar = (height) => {
   const bar = document.createElement("div");
   bar.className = "bar";
   bar.style.height = `${height}px`;
-  bar.style.width = `100%`;
-  bar.style.marginLeft = `2px`;
-  bar.style.marginRight = `2px`;
+  bar.style.width = `${barwidth}px`;
+  bar.style.margin = `0px ${margin}px`;
   bar_container.appendChild(bar);
 };
 const createBarList = () => {
@@ -117,6 +119,8 @@ const App = () => {
   slider.addEventListener("input", (e) => {
     setBars(e.target.value);
     animationSpeed = e.target.value < 50 ? 100 - e.target.value : 30;
+    barwidth = Math.floor(bar_container.clientWidth / e.target.value);
+    margin = Math.floor(bar_container.clientWidth / (e.target.value * 10));
     enableButton();
     generateNewList();
   });

@@ -14,13 +14,12 @@ async function merge(startidx, endidx, mididx, mainarr, auxarr) {
   await sortHighlight(i, j);
   while (i <= mididx && j <= endidx) {
     if (auxarr[i] < auxarr[j]) {
-      await sortHighlight(i, k);
+      await sortHighlight(k);
       await insert(auxarr[i], k);
       mainarr[k] = auxarr[i];
       k++;
       i++;
     } else {
-      await sortHighlight(j, k);
       await sortHighlight(k);
       await insert(auxarr[j], k);
       mainarr[k] = auxarr[j];
@@ -29,14 +28,14 @@ async function merge(startidx, endidx, mididx, mainarr, auxarr) {
     }
   }
   while (i <= mididx) {
-    await sortHighlight(i, k);
+    await sortHighlight(k);
     await insert(auxarr[i], k);
     mainarr[k] = auxarr[i];
     k++;
     i++;
   }
   while (j <= endidx) {
-    await sortHighlight(j, k);
+    await sortHighlight(k);
     await insert(auxarr[j], k);
     mainarr[k] = auxarr[j];
     k++;
