@@ -242,13 +242,16 @@ footer .slider-container .slider:disabled::-webkit-slider-thumb {
   }
 }
 @media (max-width: 480px) {
+  .mainbody .bar-container {
+    width: 250px;
+  }
   footer .btn-container {
-    width: 300px;
+    width: 250px;
   }
   footer .slider-container {
-    width: 300px;
+    width: 250px;
   }
   footer .selection-container {
-    width: 300px;
+    width: 250px;
   }
 }
