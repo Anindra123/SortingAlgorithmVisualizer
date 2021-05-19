@@ -228,6 +228,9 @@ footer .slider-container .slider:disabled::-webkit-slider-thumb {
   }
 }
 @media (max-width: 580px) {
+  footer {
+    align-items: center;
+  }
   footer .btn-container {
     width: 400px;
   }
@@ -242,9 +245,6 @@ footer .slider-container .slider:disabled::-webkit-slider-thumb {
   }
 }
 @media (max-width: 480px) {
-  footer {
-    align-items: center;
-  }
   .mainbody .bar-container {
     width: 300px;
   }
