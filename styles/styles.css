@@ -242,6 +242,9 @@ footer .slider-container .slider:disabled::-webkit-slider-thumb {
   }
 }
 @media (max-width: 480px) {
+  footer {
+    align-items: center;
+  }
   .mainbody .bar-container {
     width: 300px;
   }
