@@ -246,12 +246,12 @@ footer .slider-container .slider:disabled::-webkit-slider-thumb {
     width: 300px;
   }
   footer .btn-container {
-    width: 250px;
+    width: 300px;
   }
   footer .slider-container {
-    width: 250px;
+    width: 300px;
   }
   footer .selection-container {
-    width: 250px;
+    width: 300px;
   }
 }
